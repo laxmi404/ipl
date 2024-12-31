@@ -1,13 +1,6 @@
 package com.wecp.progressive.dao;
- 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
- 
-import com.wecp.progressive.config.DatabaseConnectionManager;
+
 import com.wecp.progressive.entity.Team;
  
 public class TeamDAOImpl  implements TeamDAO{

@@ -1,8 +1,6 @@
 package com.wecp.progressive.entity;
  
-import java.util.Comparator;
- 
-public class Cricketer implements Comparable<Cricketer> {
+public class Cricketer {
     private int CricketerId;
     private int teamId;
     private String cricketerName;
@@ -89,13 +87,7 @@ public class Cricketer implements Comparable<Cricketer> {
     }
  
    
-    @Override
-    public int compareTo(Cricketer otherCricketer) {
-        return Comparator.comparingInt(Cricketer::getExperience).compare(this,otherCricketer);
- 
-       
-    }
- 
+   
  
  
  

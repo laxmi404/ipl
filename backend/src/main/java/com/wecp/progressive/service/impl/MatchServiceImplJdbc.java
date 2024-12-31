@@ -1,12 +1,19 @@
 package com.wecp.progressive.service.impl;
  
 import java.util.List;
- 
+
+import com.wecp.progressive.dao.MatchDAO;
 import com.wecp.progressive.entity.Match;
 import com.wecp.progressive.service.MatchService;
  
 public class MatchServiceImplJdbc implements MatchService {
  
+    private MatchDAO matchDAO;
+
+    public MatchServiceImplJdbc(MatchDAO matchDAO) {
+        this.matchDAO = matchDAO;
+    }
+
     @Override
     public List<Match> getAllMatches() {
         return List.of();
