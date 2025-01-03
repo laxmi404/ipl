@@ -1,36 +1,31 @@
 package com.wecp.progressive.service.impl;
- 
+
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
- 
+
 import com.wecp.progressive.entity.Team;
-
 import com.wecp.progressive.service.TeamService;
- 
-public class TeamServiceImplArraylist  implements TeamService{
- 
+
+public class TeamServiceImplArraylist implements TeamService {
+
+    private List<Team> teamList = new ArrayList<>();
+
+   @Override 
+   public List<Team> getAllTeams() 
+   { 
+    return teamList;
+   }
     @Override
-
-    public List<Team> getAllTeams() {
-
-        return List.of();        
-
-    }
- 
-    @Override
-
     public int addTeam(Team team) {
+      teamList.add(team);
+    return teamList.size();  }
 
-        return -1;
-
-    }
- 
     @Override
-
     public List<Team> getAllTeamsSortedByName() {
-
-        return List.of();
-
+        List<Team> sortedTeamList = teamList;
+        sortedTeamList.sort(Comparator.comparing(Team :: getTeamName));
+        return sortedTeamList;
     }
- 
+
 }
- 
